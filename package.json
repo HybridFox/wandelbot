@@ -1,0 +1,23 @@
+{
+  "name": "wandel-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -w ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/bolt": "^3.8.1",
+    "date-fns": "^2.27.0",
+    "dotenv": "^10.0.0",
+    "got": "^12.0.0",
+    "moment": "^2.29.1",
+    "node-cron": "^3.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "type": "module"
+}
