@@ -6,12 +6,7 @@ import moment from "moment";
 
 dotenv.config();
 
-const openWeatherMapApiKey = "904ba571de3ce2bd701393ceb7218f2e";
-
-// const app = new App({
-//   signingSecret: 'def544eda7fd6b8a25fb9ee225ba8852',
-//   token: 'xoxb-276289145125-2877406070307-wnwpv72ZvnwQZW3J7sFHDDs9',
-// });
+const openWeatherMapApiKey = process.env.OPENWEATHERMAP_APIKEY;
 
 let lastMessageChannel = 0;
 let lastMessageTs = 0;
@@ -34,7 +29,7 @@ const timeMap = {
   await app.start();
   console.log("⚡️ Bolt app is running!");
 
-  sendQuestion();
+  // sendQuestion();
   cron.schedule("00 12 * * 1,4", () => sendQuestion());
   cron.schedule("00 13 * * 1,4", () => checkResponses());
 })();
