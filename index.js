@@ -55,7 +55,7 @@ const sendQuestion = async () => {
 				"type": "header",
 				"text": {
 					"type": "plain_text",
-					"text": "Wanner gaan we wandelen?",
+					"text": "Wanneer gaan we wandelen?",
 					"emoji": true
 				}
 			},
