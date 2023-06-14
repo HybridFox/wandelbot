@@ -112,6 +112,8 @@ const checkResponses = async () => {
   });
 
   const max = message.reactions
+    // Take only the first x emoji's
+    .slice(0, Object.keys(timeMap).length)
     .map((value) => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
