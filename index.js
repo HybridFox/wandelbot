@@ -30,8 +30,8 @@ const timeMap = {
   console.log("⚡️ Bolt app is running!");
 
   // sendQuestion();
-  cron.schedule("00 12 * * 1,4", () => sendQuestion());
-  cron.schedule("00 13 * * 1,4", () => checkResponses());
+  cron.schedule(process.env.POLL_CRON, () => sendQuestion());
+  cron.schedule(process.env.RESULTS_CRON, () => checkResponses());
 })();
 
 const sendQuestion = async () => {
